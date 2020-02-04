@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>test</title>
+    <!-- 引入GTJABridge的JS库 -->
+    <script src="../lib/bridge.min.js"></script>
+  </head>
+  <body>
+    <div id="tip"></div>
+  </body>
+  <script>
+      var tip = document.getElementById('tip')
+      var params = {
+        function: '/trade/entrust/v1/30200002',
+        params: {"securityId":"600000","custId":"6885959","fundAccountId":"149683","clientFeatureCode":"MA;IMEI:a000005900529e;MPN:11103200001;@GTJA|V8.32.0","userInfo":"xkZyI?qG&A>'dS)KQCZ?S`rahC2.?1A,9M}?+5#UVpaf<QXh#SjuaNd2_`3*~(Nv","password":"+0K8mU%)"}
+      };
+      try {
+        window.GTJABridge.callNative('tmkj.sendGmJson', params, function (data) {
+           tip.innerHTML = '30200002' + JSON.stringify(data)
+           window.console.info('30200002', data)
+        });
+      } catch (e) {
+        tip.innerHTML = e;
+      }
+  </script>
+</html>

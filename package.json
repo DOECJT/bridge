@@ -1,0 +1,34 @@
+{
+  "name": "GTJABridge",
+  "version": "1.0.0",
+  "description": "君弘注入方式的桥",
+  "main": "lib/bridge.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.prod.js",
+    "dev": "anywhere"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@10.181.100.104:7999/ydptjhhf/bridge-new.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "bridge"
+  ],
+  "author": "adeline",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-external-helpers": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "devDependencies": {
+    "rollup-plugin-commonjs": "^10.1.0"
+  }
+}
